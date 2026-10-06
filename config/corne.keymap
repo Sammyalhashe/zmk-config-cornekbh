@@ -217,15 +217,15 @@
 
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-            // | ESC | CTRL | NAV | SPC | FNS |   | ENT | PROG | BKSP | ALT | GUI |
+            // | ESC |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+            // | GUI |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+            // |     | CTRL | NAV | SPC |     |   | ENT | PROG | BKSP | ALT |      |
 
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LGUI   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &mo EXTRA
-                         &kp ESCAPE  &kp LCTRL  &mo NAV      &kp SPACE  &lt ADJ TAB  &kp RET
+&kp ESCAPE &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LGUI   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp LSHFT
+                         &kp LCTRL  &mo NAV  &kp SPACE    &kp RET  &lt ADJ SYM  &mo EXTRA
             >;
         };
 
@@ -234,15 +234,15 @@
 
             // -----------------------------------------------------------------------------------------
             // | TAB | Home | PgUp | End | PgDn |   | :wq | gg | G | Ctrl+[ | Tab | Shift+Tab |
-            // |     | LEFT | DOWN | UP  | RIGHT|   | H   | J | K | L |     |     |
-            // |     |     |     |     |     |   |     |     |     |     |     |     |
-            // | ESC | CTRL | NAV | SPC | FNS |   | ENT | PROG | BKSP | ALT | GUI |
+            // | ESC | LEFT | DOWN | UP  | RIGHT|   | H   | J | K | L |     |     |
+            // | GUI |     |     |     |     |   |     |     |     |     |     | / | SHFT |
+            // | CTRL | NAV | SPC |   | ENT | PROG | BKSP | ALT |
 
             bindings = <
 &trans  &kp HOME   &kp PAGE_UP  &kp END     &kp PAGE_DOWN  &trans      &vim_wq   &vim_gg     &vim_big_g  &ctrl_bracket  &kp TAB   &kp LS(TAB)
-&trans  &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT      &trans      &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT      &trans    &trans
-&trans  &trans     &trans       &trans       &trans         &trans      &kp COLON &kp W       &kp Q       &kp G          &trans    &trans
-                            &kp ESCAPE  &kp LCTRL    &kp SPACE     &kp RET   &lt SYM TAB  &kp LEFT_ALT
+&kp ESCAPE  &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT      &trans      &kp LEFT  &kp DOWN    &kp UP      &kp RIGHT      &trans    &trans
+&kp LGUI  &trans     &trans       &trans       &trans         &trans      &kp COLON &kp W       &kp Q       &kp G          &kp FSLH  &kp LSHFT
+                            &kp LCTRL  &trans    &kp SPACE     &kp RET   &lt ADJ SYM  &trans
             >;
         };
 
@@ -250,16 +250,16 @@
             display-name = "Programming";
 
             // -----------------------------------------------------------------------------------------
-            // | ESC |  {  |  }  |  (  |  )  |  <  |  >  |  "  |  '  |  `  |  +  |  - |
-            // |     |  [  |  ]  |  ;  |  :  |  =  |  %  |  &  |  |  |  ^  |  !  |  * |
-            // |     |  /  |  ?  |  @  |  #  |  $  |  .  |  ,  |  ~  |  _  |  \\ |     |
-            // | ESC | CTRL | NAV | SPC | FNS |   | ENT | PROG | BKSP | ALT | GUI |
+            // | TAB |  {  |  }  |  (  |  )  |  <  |  >  |  "  |  '  |  `  |  +  |  - |
+            // | ESC |  [  |  ]  |  ;  |  :  |  =  |  %  |  &  |  |  |  ^  |  !  |  * |
+            // | GUI |  /  |  ?  |  @  |  #  |  $  |  .  |  ,  |  ~  |  _  | / | SHFT |
+            // | CTRL | NAV | SPC |   | ENT | PROG | BKSP | ALT |
 
             bindings = <
-&kp ESCAPE  &kp LEFT_BRACE      &kp RIGHT_BRACE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE   &kp PLUS  &kp MINUS
-&trans       &kp LEFT_BRACKET    &kp RIGHT_BRACKET   &kp SEMICOLON         &kp COLON              &kp EQUAL      &kp PERCENT       &kp AMPS           &kp PIPE          &kp CARET   &kp EXCL  &kp STAR
-&trans       &kp SLASH           &kp QUESTION        &kp AT                &kp HASH               &kp DLLR       &kp DOT           &kp COMMA          &kp TILDE         &kp UNDER   &kp BSLH  &trans
-                                       &kp ESCAPE          &kp LCTRL              &kp SPACE      &kp RET           &trans             &kp LEFT_ALT
+&kp TAB  &kp LEFT_BRACE      &kp RIGHT_BRACE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE   &kp PLUS  &kp MINUS
+&kp ESCAPE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET   &kp SEMICOLON         &kp COLON              &kp EQUAL      &kp PERCENT       &kp AMPS           &kp PIPE          &kp CARET   &kp EXCL  &kp STAR
+&kp LGUI  &kp SLASH           &kp QUESTION        &kp AT                &kp HASH               &kp DLLR       &kp DOT           &kp COMMA          &kp TILDE         &kp UNDER   &kp FSLH  &kp LSHFT
+                                       &kp LCTRL          &mo NAV              &kp SPACE      &kp RET           &trans             &mo EXTRA
             >;
         };
 
@@ -269,7 +269,7 @@
 &kp F1   &kp F2     &kp F3    &kp F4    &kp F5    &kp F6      &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
 &trans   &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_UP &trans  &trans   &trans   &trans   &trans   &trans   &trans
 &trans   &trans     &trans    &trans    &kp C_VOL_DN  &trans    &trans   &trans   &trans   &trans   &bootloader  &trans
-                              &kp ESCAPE  &kp LCTRL  &kp SPACE  &kp RET  &trans  &trans
+                              &kp LCTRL  &trans  &kp SPACE  &kp RET  &trans  &trans
             >;
         };
         EXTRA {
