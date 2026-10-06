@@ -105,6 +105,11 @@
     combos {
         compatible = "zmk,combos";
 
+        adj_layer {
+            bindings = <&mo ADJ>;
+            key-positions = <32 35>;
+        };
+
         delete {
             bindings = <&kp DELETE>;
             key-positions = <15 21>;
@@ -217,7 +222,7 @@
 &kp TAB     &kp Q  &kp W  &kp E     &kp R    &kp T        &kp Y    &kp U    &kp I         &kp O    &kp P     &kp BACKSPACE
 &kp ESCAPE  &kp A  &kp S  &kp D     &kp F    &kp G        &kp H    &kp J    &kp K         &kp L    &kp SEMI  &kp SQT
 &kp LCTRL   &kp Z  &kp X  &kp C     &kp V    &kp B        &kp N    &kp M    &kp COMMA     &kp DOT  &kp FSLH  &kp LSHFT
-                          &kp LGUI  &mo NAV  &kp SPACE    &kp RET  &mo SYM  &kp LEFT_ALT
+                           &kp LGUI  &mo NAV  &kp SPACE    &kp RET  &mo SYM  &kp LEFT_ALT
             >;
         };
 
@@ -234,7 +239,7 @@
 &trans      &kp HOME  &kp PAGE_UP  &kp END   &kp PAGE_DOWN  &trans       &vim_wq    &vim_gg   &vim_big_g    &ctrl_bracket  &kp TAB   &kp LS(TAB)
 &kp ESCAPE  &kp LEFT  &kp DOWN     &kp UP    &kp RIGHT      &trans       &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &trans    &trans
 &kp LCTRL   &trans    &trans       &trans    &trans         &trans       &kp COLON  &kp W     &kp Q         &kp G          &kp FSLH  &kp LSHFT
-                                   &kp LGUI  &trans         &kp SPACE    &kp RET    &mo SYM   &kp LEFT_ALT
+                                    &kp LGUI  &trans         &kp SPACE    &kp RET    &mo SYM   &kp LEFT_ALT
             >;
         };
 
@@ -251,7 +256,7 @@
 &kp TAB   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN    &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &kp PLUS  &kp MINUS
 &kp AT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON         &kp COLON              &kp EQUAL        &kp PERCENT       &kp AMPS           &kp PIPE          &kp CARET  &kp EXCL  &kp STAR
 &kp LGUI  &kp N1            &kp N2             &kp N3                &kp N4                 &kp N5           &kp N6            &kp N7             &kp N8            &kp N9     &kp N0    &kp EQUAL
-                                               &kp LGUI              &mo NAV                &kp SPACE        &kp RET           &trans             &kp LEFT_ALT
+                                                &kp LGUI              &mo NAV                &kp SPACE        &kp RET           &trans             &kp LEFT_ALT
             >;
         };
 
@@ -261,7 +266,7 @@
 &kp F1  &kp F2          &kp F3            &kp F4      &kp F5        &kp F6          &kp F7   &kp F8  &kp F9        &kp F10  &kp F11      &kp F12
 &trans  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_UP  &kp C_VOL_DN    &vim_wq  &trans  &trans        &trans   &trans       &trans
 &trans  &trans          &trans            &trans      &trans        &trans          &trans   &trans  &trans        &trans   &bootloader  &trans
-                                          &kp LGUI    &trans        &kp SPACE       &kp RET  &trans  &kp LEFT_ALT
+                                           &kp LGUI    &trans        &kp SPACE       &kp RET  &trans  &kp LEFT_ALT
             >;
         };
 
@@ -271,7 +276,7 @@
 &trans  &trans  &trans          &trans          &trans           &msc SCRL_UP      &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans          &mmv MOVE_UP    &trans           &msc SCRL_DOWN    &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans            &trans  &trans     &trans     &trans  &trans  &trans
-                                &trans          &trans           &trans            &trans  &trans     &trans
+                                 &trans          &trans           &trans            &trans  &trans     &trans
             >;
         };
 
@@ -280,7 +285,7 @@
 &trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans        &trans        &trans        &trans        &trans
 &trans  &trans        &trans        &trans        &trans        &trans    &trans        &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-                                    &trans        &trans        &trans    &trans        &trans        &trans
+                                     &trans        &trans        &trans    &trans        &trans        &trans
             >;
         };
     };
