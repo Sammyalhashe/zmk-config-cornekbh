@@ -238,7 +238,7 @@
 &trans      &kp HOME  &kp PAGE_UP  &kp END   &kp PAGE_DOWN  &trans       &vim_wq    &vim_gg   &vim_big_g    &ctrl_bracket  &kp TAB   &kp LS(TAB)
 &kp ESCAPE  &kp LEFT  &kp DOWN     &kp UP    &kp RIGHT      &trans       &kp LEFT   &kp DOWN  &kp UP        &kp RIGHT      &trans    &trans
 &kp LCTRL   &trans    &trans       &trans    &trans         &trans       &kp COLON  &kp W     &kp Q         &kp G          &kp FSLH  &kp LSHFT
-                                   &kp LGUI  &trans         &kp SPACE    &kp RET    &mo SYM   &kp LEFT_ALT
+                                   &kp LGUI  &trans         &kp SPACE    &kp RET    &mo 3     &kp LEFT_ALT
             >;
         };
 
@@ -254,7 +254,7 @@
             bindings = <
 &kp BACKSLASH  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN    &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &kp PLUS  &kp MINUS
 &kp AT         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON         &kp COLON              &kp EQUAL        &kp PERCENT       &kp AMPS           &kp PIPE          &kp CARET  &kp EXCL  &kp STAR
-&kp LGUI       &kp N1            &kp N2             &kp N3                &kp N4                 &kp N5           &kp N6            &kp N7             &kp N8            &kp N9     &kp N0    &kp EQUAL
+&kp TILDE      &kp N1            &kp N2             &kp N3                &kp N4                 &kp N5           &kp N6            &kp N7             &kp N8            &kp N9     &kp N0    &kp EQUAL
                                                     &kp LGUI              &mo NAV                &kp SPACE        &kp RET           &trans             &kp LEFT_ALT
             >;
         };
