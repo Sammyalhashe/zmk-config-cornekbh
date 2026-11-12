@@ -1,0 +1,46 @@
+name: Draw keymap
+
+on:
+  workflow_run:
+    workflows: ["Build ZMK firmware"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: draw-keymap-${{ github.event.workflow_run.head_branch || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  draw:
+    # Only redraw after a successful firmware build of a pushed commit, never for PRs.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+
+      - uses: cachix/install-nix-action@v31
+
+      - name: Draw keymap
+        run: |
+          nix run nixpkgs#keymap-drawer -- -c keymap-drawer/config.yaml parse -z config/corne.keymap > keymap-drawer/corne.yaml
+          nix run nixpkgs#keymap-drawer -- -c keymap-drawer/config.yaml draw keymap-drawer/corne.yaml > keymap-drawer/corne.svg
+          nix shell nixpkgs#librsvg -c rsvg-convert --zoom 2 -b white keymap-drawer/corne.svg -o keymap-drawer/corne.png
+
+      - name: Commit drawing if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add keymap-drawer
+          if git diff --cached --quiet; then
+            echo "Keymap drawing is up to date."
+          else
+            git commit -m "Update keymap drawing"
+            git push
+          fi

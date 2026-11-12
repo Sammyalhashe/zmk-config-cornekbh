@@ -1,0 +1,307 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Base:
+  - Tab
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - Bksp
+  - Esc
+  - {t: A, h: Cmd}
+  - {t: S, h: Opt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
+  - G
+  - H
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Opt}
+  - {t: ;, h: Cmd}
+  - ''''
+  - Ctrl
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - Shift
+  - Cmd
+  - Nav
+  - Space
+  - Enter
+  - Programming
+  - Opt
+  Nav:
+  - {t: ▽, type: trans}
+  - Home
+  - PgUp
+  - End
+  - PgDn
+  - {t: ▽, type: trans}
+  - :wq
+  - gg
+  - G
+  - Ctrl+[
+  - Tab
+  - S-Tab
+  - Esc
+  - Cmd
+  - Opt
+  - Ctrl
+  - Shift
+  - {t: ▽, type: trans}
+  - ←
+  - ↓
+  - ↑
+  - →
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Ctrl
+  - Undo
+  - Cut
+  - Copy
+  - Paste
+  - Redo
+  - ':'
+  - W
+  - Q
+  - G
+  - /
+  - Shift
+  - Cmd
+  - {type: held}
+  - Space
+  - Enter
+  - Programming
+  - Opt
+  Programming:
+  - \
+  - '{'
+  - '}'
+  - (
+  - )
+  - <
+  - '>'
+  - '"'
+  - ''''
+  - '`'
+  - +
+  - '-'
+  - '@'
+  - '['
+  - ']'
+  - ;
+  - ':'
+  - '='
+  - '%'
+  - '&'
+  - '|'
+  - ^
+  - '!'
+  - '*'
+  - '~'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '='
+  - Cmd
+  - Nav
+  - Space
+  - Enter
+  - {type: held}
+  - Opt
+  Function/Media:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: Mouse, h: toggle}
+  - Prev
+  - Play
+  - Next
+  - Vol+
+  - Vol-
+  - :wq
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - {t: Numpad, h: toggle}
+  - Boot
+  - Studio unlock
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Boot
+  - BT clear
+  - Cmd
+  - {type: held}
+  - Space
+  - Enter
+  - {type: held}
+  - Opt
+  Mouse/Nvim:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Scroll ↑
+  - Files
+  - Git files
+  - Grep
+  - Buffers
+  - Resume
+  - {t: ▽, type: trans}
+  - {t: Mouse, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Mouse ↑
+  - {t: ▽, type: trans}
+  - Scroll ↓
+  - Tree
+  - L click
+  - R click
+  - LazyGit
+  - jjui
+  - {t: ']h', h: src/hdr}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Mouse ←
+  - Mouse ↓
+  - Mouse →
+  - {t: ▽, type: trans}
+  - '[e'
+  - ']e'
+  - '[c'
+  - ']c'
+  - Undotree
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: Float term, h: Ctrl+\}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Numpad:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
+  - {t: Numpad, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - {t: ▽, type: trans}
+combos:
+- p: [15, 21]
+  k: Del
+- p: [5, 17]
+  k: '%'
+  l: [Base]
+- p: [28, 16]
+  k: '='
+  l: [Base]
+- p: [4, 16]
+  k: $
+  l: [Base]
+- p: [3, 15]
+  k: '#'
+  l: [Base]
+- p: [2, 14]
+  k: '@'
+  l: [Base]
+- p: [26, 14]
+  k: \
+  l: [Base]
+- p: [8, 20]
+  k: '*'
+  l: [Base]
+- p: [32, 20]
+  k: /
+  l: [Base]
+- p: [7, 19]
+  k: +
+  l: [Base]
+- p: [31, 19]
+  k: '-'
+  l: [Base]
+- p: [30, 18]
+  k: _
+  l: [Base]
+- p: [31, 32]
+  k: '['
+  l: [Base]
+- p: [33, 32]
+  k: ']'
+  l: [Base]
+- p: [36, 37]
+  k: Mouse/Nvim
+- p: [20, 19]
+  k: {t: (, s: <}
+  l: [Base]
